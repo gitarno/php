@@ -7,7 +7,7 @@
 // senha
 // schema
 //1 passo - conexão 
-$conexao = mysqli_connect('localhost','root','','mydb'); 
+require('conexao.php');
 //2 passo - sql
 // usando aspas dupla.. pois no sql é aspas simples. 
 $comandoSql = "INSERT INTO usuario (email,nome) VALUES ('arno@advg.com.br','Arno Roldão Junior'),('galvao@galvao.eti.br','Er Galvão Abbott')";
