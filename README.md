@@ -1,4 +1,7 @@
-php
+PHP 
 ===
+Instrutor: Er Galvão
+Escola: Targettrust
+====
 
-aulas de pHP 
+Aulas de Orientação a objeto em PHP 
