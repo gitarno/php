@@ -1,6 +1,6 @@
 ﻿<?php
 // arquivo na pasta WWW.. de um server.. ou acessivel via Browser...
-	require ('../../classes_arno/Produto.php');
+	require '../../classes_arno/Produto.php';
 	// chamando class
 	$produto = new Produto();
 	//atribuindo
@@ -8,8 +8,8 @@
 	$produto->produto = 'iPhone 5s';		
 	$produto->preco = 2900;
 	// usando a metodo
-	echo $produto->retornarCodigo();
-	echo $produto->retornarPreco();
+	echo 'Cód.: '.$produto->retornarCodigo();
+	echo ' R$'.$produto->retornarPreco();
 	
 	
 		
