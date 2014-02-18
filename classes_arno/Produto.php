@@ -6,9 +6,10 @@ class Produto{
 	var $produto, $codigo, $preco;
 
 	function imprimirEtiqueta(){
-		echo 'Cód.: ';
-		echo 'Preço.: ';
-			
+		echo 'Cód.: '.$this->codigo ;
+		echo 'Preço.: R$'.$this->preco;
+		
+		
 	}	
 }
 ?>
