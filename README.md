@@ -2,9 +2,9 @@ PHP
 ===
 Instrutor: Er Galvão
 Escola: Targettrust
-====
 
 Aulas de Orientação a objeto em PHP 
+====
 
 Introduções... aula
 Orientação objeto trabalhamos com Objetos, classes, metodos, 
@@ -21,9 +21,10 @@ recuperar()
 nome		- variaveis 
 senha		  propriedades
 email
-====
+
 
 Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Browser...
+====
 	- wamp  ====>>> pasta HOST, ROOT
  		-  www / ===> para acessos HTTP
 			-pastaServer / 	
@@ -31,9 +32,9 @@ Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Brow
 		- classes 
 		  	usuario.php // usar php melhor que .class.. pois não tem como ser lido caso for invadido via browser.. ou via GET
 	
-==== 
 
 Passo ideais para construção de estruturas OO..
+==== 
 
 1. Construa a classes na pasta de classes... 
 	 classes / <b> Class.php </b>
@@ -46,8 +47,8 @@ Passo ideais para construção de estruturas OO..
 	 
 /****** FECHO .. agora pra sinuca ********/
 	 
-==== 
 Dicas:  Boas praticas
+==== 
 
 1. Classes com inicial Maisucscula
 2. Cada metodo.. um unico algoritimo .. unica função 
