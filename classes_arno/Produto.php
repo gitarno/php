@@ -5,11 +5,12 @@ class Produto{
 	
 	var $produto, $codigo, $preco;
 
-	function imprimirEtiqueta(){
-		echo 'Cód.: '.$this->codigo ;
-		echo 'Preço.: R$'.$this->preco;
-		
-		
+	function retornarCodigo(){
+		return $this->codigo;	
+	}	
+	
+	function retornarPreco(){
+		return $this->preco;	
 	}	
 }
 ?>
