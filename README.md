@@ -52,6 +52,7 @@ Dicas:  Boas praticas
 
 1. Classes com inicial Maisucscula
 2. Cada metodo.. um unico algoritimo .. unica função 
+3. Não use echo ou print em um Classe ou função.! 
 
 
 
