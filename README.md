@@ -47,7 +47,9 @@ Passo ideais para construção de estruturas OO..
 	 
 /****** FECHO .. agora pra sinuca ********/
 	 
-Dicas:  Boas praticas
+	 
+	 
+Dicas:  Boas praticas em OO
 ==== 
 
 1. Classes com inicial Maisucscula
@@ -56,5 +58,18 @@ Dicas:  Boas praticas
 
 
 
+Dicas: PHP fundamental;
 
+1. Utilize os operadores === e !==
+2. isset() brincando de strlen()
+3. Evitando aquele maldito erro dos Ifs
+4. Zeros à esquerda (e à direita também!)
+5. Com vocês, a função list()
+6. Esqueça (de vez) o '?>' no final dos arquivos
+7. Métodos em cadeia
+8. Par ou ímpar?
+9. echo 'Olá', 'Mundo';
+10. Ordenando arrays por um índice
+11. Substituindo a primeira ocorrência de uma string
 
+referencia: 
