@@ -12,7 +12,4 @@
 	var_dump($contaArno);
 	
 	
-	
-	
-
 ?>
