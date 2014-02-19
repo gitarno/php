@@ -17,6 +17,8 @@ class ContaPoupanca extends ContaCorrente{
 			$this->agencia = $pAg;
 			$this->aniversario = $pAn;
 			$this->saldo = $pS;
+			
+			// impedindo HERANÇAS.... 
 				
 		}	 
 		 

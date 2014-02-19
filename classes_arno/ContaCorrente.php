@@ -2,8 +2,14 @@
 
 class ContaCorrente{
 		
-		var $agencia, $numero, $digito, $tipo, $saldo;
-		var $meuFilho; 
+		public $agencia, $numero, $digito, $saldo;
+		//Impedindo que partes do elemento seja visto. 
+		// MODELO DE VISIBILIDADE
+		// public - para todos ... DEFAULT
+		// protected - PARA PROPRIA e FILHOS
+		// PRIVATE - So para ela! 
+		private $tipo;
+		public $meuFilho; 
 		
 		// funções especiais 
 		function __contrutor($pNumero, $pAgencia, $pTipo, $pSaldo=0){
@@ -15,13 +21,13 @@ class ContaCorrente{
 			
 		}
 		
-		function credito($pValor){
+		public function credito($pValor){
 			$this->saldo += $pValor;					
 		}
-		function debito($pValor){
+		public function debito($pValor){
 			$this->saldo -= $pValor;					
 		}
-		function consulta(){
+		public function consulta(){
 			return $this->saldo;						
 		}
 		
