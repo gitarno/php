@@ -3,7 +3,7 @@
 class Produto{
 // definir caracteristicas... 
 	var $produto, $codigo, $preco;
-
+	
 	function retornarCodigo(){
 		return $this->codigo;	
 	}	
