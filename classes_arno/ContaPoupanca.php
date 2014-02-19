@@ -10,16 +10,14 @@ class ContaPoupanca extends ContaCorrente{
 		var $agencia, $numero, $saldo, $aniversario;
 		*/// PRECISANDO COLOCAR APENAS ...  os atributos especificos..
 		
-		var $aniversario; 
+		private $aniversario; 
 		 
 		function __construct($pN,$pAg,$pAn,$pS = 0){
 			$this->numero = $pN;
 			$this->agencia = $pAg;
 			$this->aniversario = $pAn;
 			$this->saldo = $pS;
-			
 			// impedindo HERANÇAS.... 
-				
 		}	 
 		 
 		function render(){
