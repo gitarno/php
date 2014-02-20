@@ -15,6 +15,28 @@ class Conta{
 		$this->saldo -= $valor;
 	}
 
+	// comandos SETTERS ...	
+	public function setAgencia($p){
+		$this->agencia = $p;	
+	}	
+	public function setNumero($p){
+		$this->numero = $p;	
+	}
+	public function setSaldo($p){
+		$this->saldo = $p;	
+	}	
+	
+	// comandos SETTERS ...
+	public function getAgencia(){
+		return $this->agencia;	
+	}	
+	public function getNumero(){
+		return $this->numero;	
+	}
+	public function getSaldo(){
+		return $this->saldo;	
+	}	
+
 }
 
 ?>
