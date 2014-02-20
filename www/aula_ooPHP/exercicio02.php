@@ -11,7 +11,13 @@ var_dump($o_cc);
 $o_cc->setAgencia(123);
 $o_cc->setNumero(4567);
 $o_cc->setSaldo(0);
-$o_cc->setTipo(123);
+//$o_cc->setTipo(123);
+try{
+	$o_cc->setTipo("F");	
+}catch(Exception $e){
+	echo $e->getMessage();
+}
+
 
 echo $o_cc->getAgencia();
 echo $o_cc->getNumero();

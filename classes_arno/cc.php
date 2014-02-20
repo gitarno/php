@@ -21,7 +21,9 @@ class cc extends Conta{
 
 		// estou testando se não tem os dois valores..ou mais..
 		if(!in_array($p,array("F","J"))){
-			$this->tipo = $p;
+			// metodo de inserção para o desenvolvedor.
+			throw new Exception("legal: $p");
+		//	$this->tipo = $p;
 			
 		}
 		
