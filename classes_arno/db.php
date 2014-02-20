@@ -14,7 +14,13 @@ class DB{
 		$this->setGet('base',$pB);		
 	}	
 	
-	
+	function SOULOCO($p){
+			 echo "<br> ********************* ";
+			echo func_num_args() . "<br>";
+			var_dump( func_get_arg(0));
+	        echo "<br> ********************* ";
+	}
+		
 	public function setGet($atributo,$p=null){
 		if($p==null){
 			// comandos GETTERS ...
