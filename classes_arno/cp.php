@@ -20,12 +20,12 @@ class cp extends Conta{
 		
 	// comandos SETTERS ...	
 	public function setAniversario($p){
-		$this->tipo = $p;	
+		$this->aniversario = (string)$p;	
 	}	
 
 	// comandos GETTERS ...
 	public function getAniversario(){
-		return $this->tipo ;	
+		return (string)$this->aniversario ;	
 	}
 	
 		

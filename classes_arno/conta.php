@@ -17,24 +17,24 @@ class Conta{
 
 	// comandos SETTERS ...	
 	public function setAgencia($p){
-		$this->agencia = $p;	
+		$this->agencia = (string)$p;	
 	}	
 	public function setNumero($p){
-		$this->numero = $p;	
+		$this->numero = (integer)$p;	
 	}
 	public function setSaldo($p){
-		$this->saldo = $p;	
+		$this->saldo = (float)$p;	
 	}	
 	
 	// comandos SETTERS ...
 	public function getAgencia(){
-		return $this->agencia;	
+		return (string)$this->agencia;	
 	}	
 	public function getNumero(){
-		return $this->numero;	
+		return (integer)$this->numero;	
 	}
 	public function getSaldo(){
-		return $this->saldo;	
+		return (float)$this->saldo;	
 	}	
 
 }
