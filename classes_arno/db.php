@@ -18,16 +18,9 @@ class DB{
 		// verifico se o numero de arrays é maior que 2 .... assim to atribuindo. 
 		$numargs = func_num_args();
 		//condicional caso vor maior..
-		if($numargs>=2){
-			// comandos SETTERS ...
-			// atribui o segunto ARGUMENTO ao primeiro.
-			$this->$p = func_get_arg(1);
-		}else{
-			// comandos GETTERS ...
-			// caso tenha apenas 1 ... retorna apenas o valor do elemento
-			return $this->$p;
-											
-		}
+		return ($numargs>=2)? ($this->$p = func_get_arg(1)) : $this->$p ;
+									
+
 	}
 	
 
