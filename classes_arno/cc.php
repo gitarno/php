@@ -10,7 +10,27 @@ class cc extends Conta{
 		$this->numero = $pN;
 		$this->saldo = $pS;
 		$this->tipo = $pT;				
-	}			
+	}	
+	public function setAgencia($p){
+		$this->agencia = $p;	
+	}	
+	public function setNumero($p){
+		$this->numero = $p;	
+	}
+	public function setSaldo($p){
+		$this->saldo = $p;	
+	}	
+	public function setTipo($p){
+		$this->tipo = $p;	
+	}	
+	public function setSaldo($p){
+		$this->saldo += $p;
+	}
+	
+	
+	
+	
+	
 }
 
 
