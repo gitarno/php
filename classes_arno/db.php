@@ -13,15 +13,6 @@ class DB{
 		$this->setGet('host',$pH);						
 		$this->setGet('base',$pB);		
 	}	
-	
-	function SOULOCO($p){
-			 echo "<br> ********************* ";
-			echo func_num_args() . "<br>";
-			//echo( func_get_arg(0) + func_get_arg(1));
-			//$this->func_get_arg(0) = "legal";
-	        echo "<br> ********************* ";
-			
-	}
 		
 	public function setGet($p){
 		// verifico se o numero de arrays é maior que 2 .... assim to atribuindo. 
@@ -39,25 +30,6 @@ class DB{
 		}
 	}
 	
-		/*
-	public function setGet($atributo,$p=null){
-		if($p==null){
-			// comandos GETTERS ...
-			return $this->$atributo;			
-		}else{
-			// comandos SETTERS ...	
-			$this->$atributo = $p;		
-		}
-	}
-	/*
-	// comandos SETTERS ...	
-	public function setUsuario($p){
-		$this->usuario = $p;	
-	}
-	// comandos GETTERS ...
-	public function getUsuario(){
-		return $this->usuario ;	
-	}*/
 
 }
 
