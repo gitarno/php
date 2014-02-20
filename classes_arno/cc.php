@@ -6,10 +6,10 @@ class cc extends Conta{
 	private $tipo;
 	
 	public function __construct($pA,$pN,$pS=0,$pT){
-		$this->agencia = $pA;
-		$this->numero = $pN;
-		$this->saldo = $pS;
-		$this->tipo = $pT;				
+		$this->setAgencia($pA);
+		$this->setNumero($pN);
+		$this->setSaldo($pS);
+		$this->setTipo($pT);				
 	}
 	
 	// comandos SETTERS ...	
@@ -23,9 +23,16 @@ class cc extends Conta{
 		if(!in_array($p,array("F","J"))){
 			// metodo de inserção para o desenvolvedor.
 			throw new Exception("legal: $p");
-		//	$this->tipo = $p;
-			
+		}else{
+			$this->tipo = $p;
 		}
+		
+		try{
+			$o_cc->setTipo("F") ;	
+		}catch(Exception $e){
+			echo $e->getMessage();
+		}
+
 		
 		
 

@@ -6,13 +6,15 @@ class Conta{
 	protected $saldo;
 	
 	public function consulta(){
-		return $this->saldo;
+		return $this->getSaldo();
 	}
 	public function credito($valor){
-		$this->saldo += $valor;
+		//$this->saldo += $valor;
+		// PARA NAO VIOLAR as regras de SETTER e GETTER
+		$this->setSaldo($this->getSaldo()+ (float)$valor);
 	}
 	public function debito($valor){
-		$this->saldo -= $valor;
+		$this->setSaldo($this->getSaldo()- (float)$valor);
 	}
 
 	// comandos SETTERS ...	
@@ -26,7 +28,7 @@ class Conta{
 		$this->saldo = (float)$p;	
 	}	
 	
-	// comandos SETTERS ...
+	// comandos GETTERS ...
 	public function getAgencia(){
 		return (string)$this->agencia;	
 	}	
