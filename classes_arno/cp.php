@@ -7,9 +7,12 @@ class cp extends Conta{
 	private $aniversario;
 	
 	public function __construct($pA,$pN,$pS=0,$pAn){
+		parent:: __construct($pA, $pN, $pS);
+		/*
 		$this->agencia = $pA;
 		$this->numero = $pN;
 		$this->saldo = $pS;
+		*/
 		$this->aniversario = $pAn;						 	
 	}
 	

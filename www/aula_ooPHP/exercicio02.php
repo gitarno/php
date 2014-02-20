@@ -6,8 +6,9 @@ require '../../classes_arno/cp.php';
 //require $diretorio.'cc.php';
 //require $diretorio.'cp.php';
 
-$o_cc = new cc(000,000,111,01);
+$o_cc = new cc(000,000,111,"F");
 var_dump($o_cc);
+
 $o_cc->setAgencia(123);
 $o_cc->setNumero(4567);
 $o_cc->setSaldo(0);
@@ -19,10 +20,11 @@ try{
 }
 
 
-echo $o_cc->getAgencia();
-echo $o_cc->getNumero();
-echo $o_cc->getSaldo();
-echo $o_cc->getTipo();
+echo $o_cc->getAgencia()."<br>";
+echo $o_cc->getNumero()."<br>";
+echo $o_cc->getSaldo()."<br>";
+echo $o_cc->getTipo()."<br>";
+
 
 
 $o_cp = new cp(111,111,222,03);

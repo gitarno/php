@@ -5,6 +5,12 @@ class Conta{
 	protected $numero;
 	protected $saldo;
 	
+	public function __construct($pA,$pN,$pS=0){
+		$this->setAgencia($pA);
+		$this->setNumero($pN);
+		$this->setSaldo($pS);
+	}
+	
 	public function consulta(){
 		return $this->getSaldo();
 	}
@@ -16,7 +22,6 @@ class Conta{
 	public function debito($valor){
 		$this->setSaldo($this->getSaldo()- (float)$valor);
 	}
-
 	// comandos SETTERS ...	
 	public function setAgencia($p){
 		$this->agencia = (string)$p;	
@@ -27,7 +32,6 @@ class Conta{
 	public function setSaldo($p){
 		$this->saldo = (float)$p;	
 	}	
-	
 	// comandos GETTERS ...
 	public function getAgencia(){
 		return (string)$this->agencia;	
