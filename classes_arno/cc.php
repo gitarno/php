@@ -22,15 +22,14 @@ class cc extends Conta{
 		// condicional para F e J
 		//(($p=="F")||($p=="J"))?$this->tipo = $p:$this->tipo = $p;	
 		// estou testando se não tem os dois valores..ou mais..
-		/*if(!in_array($p,array("F","J"))){
+		if(!in_array($p,array("F","J"))){
 			// metodo de inserção para o desenvolvedor.
 			throw new Exception("Valor invalido: $p");
-		}else{
-			//throw new Exception("Valor Valido: $p");
+		}			//throw new Exception("Valor Valido: $p");
 			$this->tipo = $p;
-		}*/
 		
-		(!in_array($p,array("F","J")))? Exception("Valor invalido: $p"):$this->tipo = $p;
+		//Nao funfa
+		//(!in_array($p,array("F","J")))? Exception("Valor invalido: $p"):$this->tipo = $p;
 		
 		
 

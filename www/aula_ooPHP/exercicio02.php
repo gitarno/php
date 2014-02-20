@@ -14,7 +14,7 @@ $o_cc->setNumero(4567);
 $o_cc->setSaldo(0);
 //$o_cc->setTipo(123);
 try{
-	$o_cc->setTipo("F");	
+	$o_cc->setTipo("z");	
 }catch(Exception $e){
 	echo $e->getMessage();
 }
