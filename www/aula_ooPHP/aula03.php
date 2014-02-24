@@ -4,9 +4,24 @@
 require '../../classes_arno/db.php';
 
 
-$conn = new DB("arno",123456,"localhost","db"); //SETTERSss
+$conn = new DB("root",'',"localhost","mydb"); //SETTERSss
 var_dump($conn); //Verificando se alimentou
-echo $conn->setGet('usuario');	//GET
+
+try{
+	$conn->conectar();
+}catch(Exception $ex){
+	die($ex->getMessage());	
+}
+
+$executar = $conn->executar("SELECT * FROM usuario");
+
+while($dados = mysqli_fetch_assoc($executar)) {
+  echo $dados["nome"] . "<br>";    
+} 
+
+
+//$conn->desconectar();
+
 
 
 
