@@ -4,20 +4,19 @@
 require '../../classes_arno/db.php';
 
 
-$conn = new DB("root",'',"localhost","mydb"); //SETTERSss
+$conn = DB::singleton("root",'',"localhost","mydb"); //SETTERSss
 var_dump($conn); //Verificando se alimentou
 
-try{
-	$conn->conectar();
-}catch(Exception $ex){
-	die($ex->getMessage());	
-}
+$conn->conectar();
 
 $executar = $conn->executar("SELECT * FROM usuario");
 
 while($dados = mysqli_fetch_assoc($executar)) {
-  echo $dados["nome"] . "<br>";    
+  echo $dados["nome"] . " - ";   
+  echo $dados["email"] . "<br>";    
 } 
+
+
 
 
 //$conn->desconectar();
