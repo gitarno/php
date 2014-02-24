@@ -7,6 +7,12 @@ class DB{
 	private $host;
 	private $base;
 	private $conn;
+	private static $intancia;
+	
+	public static function sigleton($pU,$pS,$pH,$pB){
+		
+	}
+	
 	
 	function __construct($pU,$pS,$pH,$pB){
 		$this->sg('usuario',$pU);		
@@ -26,10 +32,17 @@ class DB{
 		//mysqli_connect("myhost","myuser","mypassw","mybd") or die("Error " . mysqli_error($link));
 		//$this->conn = mysqli_connect($this->s('host'),$this->sg('usuario'),$this->sg('senha'),$this->sg('base'));
 		//setters
-		if(!$this->sg('conn',mysqli_connect($this->sg('host'),$this->sg('usuario'),$this->sg('senha'),$this->sg('base')))){
-			throw new Exeception("Erro de conexão");	
-		};
-		//var_dump($this->sg('conn'));
+		try{
+			if(!$this->sg('conn',mysqli_connect($this->sg('host'),$this->sg('usuario'),$this->sg('senha'),$this->sg('base')))){
+				throw new Exeception("Erro de conexão");	
+			};
+			// operador de escopo
+			self::log("Ocorreu uma conexão");
+			//var_dump($this->sg('conn'));		
+			
+		}catch(Exception $ex){
+			die($ex->getMessage());	
+		}
 		
 	}
 	
@@ -61,10 +74,12 @@ class DB{
 		
 		$arquivo = date('Y-m-d');
 		$linha = date('[ H:i:s ] - ').$mensagem.PHP_EOL;
-		file_put_contents();
-		
+		// uma facilitadora.. ou seja ela faz toda a funcao de escrever um arquivo.
+		// php_fopen...php_fwrite.... USAR DIR para ele saber onde ele está.
+		file_put_contents(__DIR__."/../logs_arno/$arquivo.txt",$linha,FILE_APPEND);
 		
 	}
+	
 	
 	
 }
