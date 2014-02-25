@@ -100,14 +100,28 @@ Autoload >>>>>>>>>>>>>>>>> COMPOSER
 		require $fileName;
 	});
 	
-	
-	
-			
-		
-		
-		
 */
 
+Classes abstratas e concretas
+===
+
+CLasses Abstratas....
+	// elas nao poderam ser instanciadas... ou seja sou obrigado EXTENDs para usar.
+	bancoDeDados .. .. pois nao se refere a algo especifico....
+	
+Classes Concretas..
+
+	mysql ....... mysql.php \n 	
+	postgresql .. postg.php \n	
+	
+	estrutura: \n
+	Banco	
+
+	
+	
+	
+	 
+	 
 	 
 	 
 	 
