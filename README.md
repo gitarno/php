@@ -1,9 +1,9 @@
-PHP 
+#PHP 
 ===
 Instrutor: Er Galvão
 Escola: Targettrust
 
-Aulas de Orientação a objeto em PHP 
+##Aulas de Orientação a objeto em PHP 
 ====
 
 Introduções... aula
@@ -23,7 +23,7 @@ senha		  propriedades
 email
 
 
-Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Browser...
+##Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Browser...
 ====
 	- wamp  ====>>> pasta HOST, ROOT
  		-  www / ===> para acessos HTTP
@@ -33,7 +33,7 @@ Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Brow
 		  	usuario.php // usar php melhor que .class.. pois não tem como ser lido caso for invadido via browser.. ou via GET
 	
 
-Passo ideais para construção de estruturas OO..
+##Passo ideais para construção de estruturas OO..
 ==== 
 
 1. Construa a classes na pasta de classes... 
@@ -48,7 +48,7 @@ Passo ideais para construção de estruturas OO..
 /****** FECHO .. agora pra sinuca ********/
 	 
 
-AUTOLOAD.. COMPOSER
+##AUTOLOAD.. COMPOSER
 ===
 /* 
 Autoload >>>>>>>>>>>>>>>>> COMPOSER
@@ -102,7 +102,7 @@ Autoload >>>>>>>>>>>>>>>>> COMPOSER
 	
 */
 
-Classes abstratas e concretas
+##Classes abstratas e concretas
 ===
 
 CLasses Abstratas....
@@ -114,18 +114,21 @@ Classes Concretas..
 	mysql ....... mysql.php \n 	
 	postgresql .. postg.php \n	
 	
-	estrutura: \n
-	Banco	
+	Estrutura: \n
+	RAIZ 
+	+ classes_arno
+	  +db
+	    - db.php
+		- mysqli.php
+		- postg.php
+	  - autoload.php
+		
+	+ www (public_html)
+	  + aula_ooPHP
+	    - script.php 
 
-	
-	
-	
 	 
-	 
-	 
-	 
-	 
-Dicas:  Boas praticas em OO
+###Dicas:  Boas praticas em OO
 ==== 
 
 1. Classes com inicial Maisucscula
@@ -134,7 +137,7 @@ Dicas:  Boas praticas em OO
 
 
 
-Dicas: PHP fundamental;
+###Dicas: PHP fundamental;
 
 1. Utilize os operadores === e !==
 2. isset() brincando de strlen()
