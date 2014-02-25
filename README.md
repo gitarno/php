@@ -56,6 +56,9 @@ Autoload >>>>>>>>>>>>>>>>> COMPOSER
 	- PSR-4 : http://www.php-fig.org/psr/psr-4/
 	composers.... 
 		https://getcomposer.org/
+		https://packagist.org/
+		http://github.com
+		
 		http://www.noupe.com/php/20-useful-php-components-tutorials-for-everyday-project.html
 	http://pear.php.net/
 		- JSON
