@@ -1,9 +1,9 @@
-PHP 
+#PHP 
 ===
 Instrutor: Er Galvão
 Escola: Targettrust
 
-Aulas de Orientação a objeto em PHP 
+##Aulas de Orientação a objeto em PHP 
 ====
 
 Introduções... aula
@@ -23,7 +23,7 @@ senha		  propriedades
 email
 
 
-Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Browser...
+##Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Browser...
 ====
 	- wamp  ====>>> pasta HOST, ROOT
  		-  www / ===> para acessos HTTP
@@ -33,7 +33,7 @@ Estrutura recomendada nunca se coloca classe dentro da pasta acessivel pelo Brow
 		  	usuario.php // usar php melhor que .class.. pois não tem como ser lido caso for invadido via browser.. ou via GET
 	
 
-Passo ideais para construção de estruturas OO..
+##Passo ideais para construção de estruturas OO..
 ==== 
 
 1. Construa a classes na pasta de classes... 
@@ -47,9 +47,88 @@ Passo ideais para construção de estruturas OO..
 	 
 /****** FECHO .. agora pra sinuca ********/
 	 
+
+##AUTOLOAD.. COMPOSER
+===
+/* 
+Autoload >>>>>>>>>>>>>>>>> COMPOSER
+	- PSR-0 : http://www.php-fig.org/psr/psr-0/
+	- PSR-4 : http://www.php-fig.org/psr/psr-4/
+	composers.... 
+		https://getcomposer.org/
+		https://packagist.org/
+		http://github.com
+		
+		http://www.noupe.com/php/20-useful-php-components-tutorials-for-everyday-project.html
+	http://pear.php.net/
+		- JSON
+		- - Apache/log4php
+		- Packagist
+		- Web
+		
+	EXEMPLOA : https://gist.github.com/jwage/221634
+	function autoload($className)
+	{
+		$className = ltrim($className, '\\');
+		$fileName  = '';
+		$namespace = '';
+		if ($lastNsPos = strrpos($className, '\\')) {
+			$namespace = substr($className, 0, $lastNsPos);
+			$className = substr($className, $lastNsPos + 1);
+			$fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
+		}
+		$fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+	
+		require $fileName;
+	}
+	
+	EXEMPLOA : https://gist.github.com/jwage/221634
+	http://www.php.net/manual/pt_BR/function.spl-autoload.php
+	
+	spl_autoload_register(function ($className)
+	{
+		$className = ltrim($className, '\\');
+		$fileName  = '';
+		$namespace = '';
+		if ($lastNsPos = strrpos($className, '\\')) {
+			$namespace = substr($className, 0, $lastNsPos);
+			$className = substr($className, $lastNsPos + 1);
+			$fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
+		}
+		$fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+	
+		require $fileName;
+	});
+	
+*/
+
+##Classes abstratas e concretas
+===
+
+CLasses Abstratas....
+	// elas nao poderam ser instanciadas... ou seja sou obrigado EXTENDs para usar.
+	bancoDeDados .. .. pois nao se refere a algo especifico....
+	
+Classes Concretas..
+
+	mysql ....... mysql.php \n 	
+	postgresql .. postg.php \n	
+	
+	Estrutura: \n
+	RAIZ 
+	+ classes_arno
+	  +db
+	    - db.php
+		- mysqli.php
+		- postg.php
+	  - autoload.php
+		
+	+ www (public_html)
+	  + aula_ooPHP
+	    - script.php 
+
 	 
-	 
-Dicas:  Boas praticas em OO
+###Dicas:  Boas praticas em OO
 ==== 
 
 1. Classes com inicial Maisucscula
@@ -58,7 +137,7 @@ Dicas:  Boas praticas em OO
 
 
 
-Dicas: PHP fundamental;
+###Dicas: PHP fundamental;
 
 1. Utilize os operadores === e !==
 2. isset() brincando de strlen()
