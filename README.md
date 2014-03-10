@@ -151,4 +151,4 @@ Classes Concretas..
 10. Ordenando arrays por um índice
 11. Substituindo a primeira ocorrência de uma string
 
-referencia: 
+referencia: http://www.daviferreira.com/posts/11-dicas-de-php-que-talvez-voce-nao-conheca
